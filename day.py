@@ -64,7 +64,7 @@ def contador (c,r_c):
         ret_day=int(ret_call[0:2])
         ret_month=int(ret_call[3:5])
 
-        #_______________________________________________________________________________
+        
         #cada fecha de interaccion corresponde a un numero de dia en un periodo de año de 365 dias para este caso
         #a continuacion definiremos esos numeros de dias
         #defino el inicio del ciclo correspondiente al caso atendido en el momento
