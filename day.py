@@ -106,5 +106,5 @@ def contador (c,r_c):
         print("dias transcurridos sin oferta de retencion: ", days_before,"\n")
         print("dias transcurridos con oferta de retencion: ", days_after)
 
-        return days_before,days_before
+        return days_before,days_after
         
