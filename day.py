@@ -62,19 +62,15 @@ def contador (ciclo_i,ret_c):
     #a continuacion definiremos esos numeros de dias
     #defino el inicio del ciclo correspondiente al caso atendido en el momento
     if ret_day >= ciclo:     
-        start_ciclo=def_n_day(ciclo,ret_month,diccionario)
-        print("1")
+        start_ciclo=def_n_day(ciclo,ret_month,diccionario)  
     else:
         start_ciclo=def_n_day(ciclo,ret_month-1,diccionario)
-        print("2")
     print("dia de inicio ciclo: ",start_ciclo)
     #defino el final del ciclo correspondiente al caso atendido en el momento
     if ret_day > ciclo:
         final_ciclo=def_n_day(ciclo,ret_month+1,diccionario)
-        print("1")
     else:
         final_ciclo=def_n_day(ciclo,ret_month,diccionario)
-        print("2")
     print("dia de fin ciclo: ",final_ciclo)
     #definie el numero de dia de la retencion
     ret=def_n_day(ret_day,ret_month,diccionario)

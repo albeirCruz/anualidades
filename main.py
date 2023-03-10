@@ -7,5 +7,5 @@ if __name__=="__main__":
     #traemos los periodos establecidos
     cont=contador(ciclo,ret_call)
     #aplicamos descuento
-    prop_dcto=dcto(cont[0],cont[1],0.3,40990)
+    prop_dcto=dcto(cont[1],0.3,49900)
     print("\nvalor proporcional de la boleta:", prop_dcto)
