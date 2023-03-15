@@ -7,4 +7,3 @@ def dcto (days_after,descuento,value_boleta):
     """readme
         traemos los periodos ya establecidos en day.py y aplcamos descuentos"""
     return value_boleta-(((value_boleta*descuento)/30)*days_after)
- 

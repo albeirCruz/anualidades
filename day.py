@@ -1,12 +1,11 @@
-
-def dicc_yaer():
+def b_year():
     """ NOTA:   en esta clase definiremos una forma de contar periodos de tiempo basados en anualidades, especificamente de tiempo-contingente,
         las cuales tienen un inicio pero se desconoce e un fin.
-        nos basaremos en los dias que contiene un año dependiendo si es bisiesto o no (365/366), y definiremos interacciones en ese periodo de tiempo 
+        nos basaremos en los dias que contiene un año  si es bisiesto (366), y definiremos interacciones en ese periodo de tiempo 
         identificando primeramente el numero de dia correspondiente a cada interaccion. 
     """
-    #se define numero de dias para año bisiesto = 366 dias
-    """leap_year = {
+#se define numero de dias para año bisiesto = 366 dias
+    leap_year = {
         1: 31,
         2: 29,
         3: 31,
@@ -18,7 +17,14 @@ def dicc_yaer():
         9: 30,
         10: 31,
         11: 30,
-        12: 31,}"""
+        12: 31,}
+    return leap_year
+def n_year():
+    """ NOTA:   en esta clase definiremos una forma de contar periodos de tiempo basados en anualidades, especificamente de tiempo-contingente,
+        las cuales tienen un inicio pero se desconoce e un fin.
+        nos basaremos en los dias que contiene un año normal(365), y definiremos interacciones en ese periodo de tiempo 
+        identificando primeramente el numero de dia correspondiente a cada interaccion. 
+    """
     #se define numero de dias para año no bisiesto = 365 dias
     normal_year = {
         1: 31,
@@ -49,11 +55,14 @@ def def_n_day (day_i,month_i,diccionario):
         temp+=dias
         if mes>=month:
             return temp+day                 
-def contador (ciclo_i,ret_c): 
+def contador (ciclo_i,ret_c,year): 
     """llama la funcion def_n_day y establece el numero de dia para inicio y final de ciclo, 
         tambien el numeor de dia de la alteracion en el ciclo de facturacion y los agrupa para definir 
         los periodos de tiempo dentro de un ciclo de facturacion""" 
-    diccionario = dicc_yaer()
+    if year=="y":
+        diccionario = b_year()
+    else:
+        diccionario = n_year()
     ciclo=ciclo_i
     ret_call=ret_c
     ret_day=int(ret_call[0:2])
